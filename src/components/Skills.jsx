@@ -1,102 +1,85 @@
 const Skills = () => {
-  const skillsData = [
+  const skillCategories = [
     {
-      category: '专业技能',
-      items: [
-        { name: '编程语言', value: ['Java', 'Python', 'C++', 'JavaScript'] },
-        { name: '前端技术', value: ['HTML5', 'CSS3', 'React', 'Vue'] },
-        { name: '数据库', value: ['MySQL', 'SQLite', 'MongoDB'] },
-        { name: '开发工具', value: ['Git', 'VS Code', 'IntelliJ IDEA'] }
+      title: '专业技能',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      ),
+      skills: [
+        { name: 'JavaScript / TypeScript', level: 85 },
+        { name: 'React / Vue 前端框架', level: 80 },
+        { name: 'Python 编程语言', level: 75 },
+        { name: '数据库（MySQL / MongoDB）', level: 70 },
+        { name: 'Git 版本控制', level: 85 },
       ]
     },
     {
-      category: '英语能力',
-      items: [
-        { name: '英语四级', value: '500+' },
-        { name: '英语六级', value: '500+' },
-        { name: '全国大学生英语竞赛', value: '省级三等奖' },
-        { name: '磐石杯英语竞赛', value: '校级三等奖' }
+      title: '软技能',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
+      skills: [
+        { name: '团队协作与沟通', level: 90 },
+        { name: '问题解决与分析', level: 85 },
+        { name: '学习能力与适应力', level: 90 },
+        { name: '时间管理与执行力', level: 85 },
+        { name: '责任心与踏实肯干', level: 92 },
       ]
     },
-    {
-      category: '软技能',
-      items: [
-        { name: '团队协作', value: '良好' },
-        { name: '项目管理', value: '优秀' },
-        { name: '沟通能力', value: '优秀' },
-        { name: '学习能力', value: '优秀' }
-      ]
-    }
   ]
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <span className="inline-block px-5 py-2 bg-[#E8F4FD] text-[#5A8AB8] rounded-full text-sm font-medium mb-4">
             技能特长
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">专业能力</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            经过系统的学习和实践，我掌握了扎实的专业技能和良好的综合能力。
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#3D4A5C] mb-2">
+            专业能力
+          </h2>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="inline-block w-8 h-0.5 bg-[#B8D8F0] rounded-full"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#7BB8E8]"></span>
+            <span className="inline-block w-8 h-0.5 bg-[#B8D8F0] rounded-full"></span>
+          </div>
+          <p className="text-sm text-[#6B7A8C] max-w-2xl mx-auto">
+            通过课程学习与项目实践，逐步构建扎实的软件工程专业技能。
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillsData.map((category, index) => (
-            <div key={index} className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 border border-blue-100">
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillCategories.map((category, idx) => (
+            <div key={idx} className="blue-card p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#E8F4FD] to-[#B8D8F0] flex items-center justify-center text-[#5A8AB8] shadow-sm">
+                  {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">{category.category}</h3>
+                <h3 className="text-xl font-bold text-[#3D4A5C]">{category.title}</h3>
               </div>
-              
-              <div className="space-y-4">
-                {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex items-center justify-between">
-                    <span className="text-gray-600">{item.name}</span>
-                    <div className="flex items-center gap-2">
-                      {Array.isArray(item.value) ? (
-                        <div className="flex flex-wrap gap-1">
-                          {item.value.map((tag, tagIndex) => (
-                            <span key={tagIndex} className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      ) : (
-                        <span className="text-gray-800 font-medium text-sm">{item.value}</span>
-                      )}
+
+              <div className="space-y-5">
+                {category.skills.map((skill, i) => (
+                  <div key={i}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-[#3D4A5C]">{skill.name}</span>
+                      <span className="text-xs text-[#6B7A8C] font-semibold">{skill.level}%</span>
+                    </div>
+                    <div className="h-2 bg-[#F0F8FF] rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-[#7BB8E8] to-[#A3D0F0] rounded-full transition-all duration-1000 ease-out"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">4+</div>
-              <div className="text-blue-100">专业奖项</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">2+</div>
-              <div className="text-blue-100">奖学金</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">500+</div>
-              <div className="text-blue-100">英语四六级</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">Top 1%</div>
-              <div className="text-blue-100">专业排名</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
