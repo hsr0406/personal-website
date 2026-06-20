@@ -31,6 +31,23 @@ const Hobbies = () => {
   return (
     <section id="hobbies" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <span className="inline-block px-5 py-2 bg-[#E8F4FD] text-[#5A8AB8] rounded-full text-sm font-medium mb-4">
+            兴趣爱好
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#3D4A5C] mb-2">
+            兴趣与热爱
+          </h2>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="inline-block w-8 h-0.5 bg-[#B8D8F0] rounded-full"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#7BB8E8]"></span>
+            <span className="inline-block w-8 h-0.5 bg-[#B8D8F0] rounded-full"></span>
+          </div>
+          <p className="text-sm text-[#6B7A8C] max-w-2xl mx-auto">
+            在兴趣的森林里探索自我，用热爱让生活更加丰盈多彩。
+          </p>
+        </div>
+
         {/* 标题卡片 */}
         <div className="blue-card p-10 text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">

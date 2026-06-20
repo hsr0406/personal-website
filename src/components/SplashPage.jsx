@@ -3,7 +3,7 @@ const SplashPage = ({ onEnter }) => {
     <div className="fixed inset-0 z-[100] flex items-center justify-center min-h-screen bg-blue-gradient animate-fade-in">
       <div className="w-[420px] max-w-[92vw] glass-effect rounded-3xl p-10 text-center shadow-xl border border-white/40">
         <div className="w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden flex items-center justify-center shadow-lg shadow-[#7BB8E8]/20">
-          <img src="/images/avatar.jpg" alt="头像" className="w-full h-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/avatar.jpg`} alt="头像" className="w-full h-full object-cover" />
         </div>
 
         <h1 className="text-2xl font-bold text-[#3D4A5C] mb-2">胡释然</h1>

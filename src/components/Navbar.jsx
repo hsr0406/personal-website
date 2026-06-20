@@ -15,6 +15,7 @@ const Navbar = () => {
   const navLinks = [
     { name: '关于我', href: '#hero' },
     { name: '在校成绩', href: '#grades' },
+    { name: '校园履职', href: '#campus-roles' },
     { name: '技能特长', href: '#skills' },
     { name: '兴趣爱好', href: '#hobbies' },
     { name: '留言树屋', href: '#message' },
@@ -35,7 +36,7 @@ const Navbar = () => {
               <span className="text-white font-bold text-lg">H</span>
             </div>
             <span className="font-semibold text-lg text-[#3D4A5C]">
-              个人简历
+              个人简介
             </span>
           </div>
 

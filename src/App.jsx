@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import Grades from './components/Grades'
+import CampusRoles from './components/CampusRoles'
 import Skills from './components/Skills'
 import Hobbies from './components/Hobbies'
 import MessageBoard from './components/MessageBoard'
@@ -36,6 +37,7 @@ function App() {
           <main>
             <Hero />
             <Grades />
+            <CampusRoles />
             <Skills />
             <Hobbies />
             <MessageBoard />

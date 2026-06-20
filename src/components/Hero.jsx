@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8">
           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden flex items-center justify-center shadow-lg shadow-[#7BB8E8]/20">
-            <img src="/images/avatar.jpg" alt="头像" className="w-full h-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}images/avatar.jpg`} alt="头像" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-[#3D4A5C] mb-2">
             我是胡释然
